@@ -14,7 +14,7 @@
         
         <!-- Informasi otomatis dari Laravel -->
         <div class="font-sans text-xs uppercase tracking-widest text-gray-700 font-medium">
-            {{ now()->isoFormat('D MMMM YYYY') }}
+            Today : {{ now()->isoFormat('D MMMM YYYY') }}
         </div>
     </div>
 </div>
@@ -92,7 +92,7 @@
                     </p>
                 @endif
 
-                <h3 class="font-serif text-xl font-medium mb-2 group-hover:underline">
+                <h3 class="font-serif text-xl font-bold mb-2 group-hover:underline">
                     {{ $article->title }}
                 </h3>
 

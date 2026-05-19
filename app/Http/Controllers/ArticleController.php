@@ -38,7 +38,7 @@ class ArticleController extends Controller
     public function create()
     {
         $categories = Category::all();
-        $tags = Tag::all();
+        $tags = Tag::withCount('articles')->orderBy('articles_count', 'desc')->take(10)->get();
         return view('articles.create', compact('categories', 'tags'));
     }
 
@@ -117,7 +117,7 @@ class ArticleController extends Controller
     public function edit(Article $article)
     {
         $categories = Category::all();
-        $tags = Tag::all();
+        $tags = Tag::withCount('articles')->orderBy('articles_count', 'desc')->take(10)->get();
         return view('articles.edit', compact('article', 'categories', 'tags'));
     }
 
@@ -199,7 +199,7 @@ class ArticleController extends Controller
         }
         $article->delete();
         
-        return redirect()->route('articles.index')->with('success', 'Artikel berhasil di hapus');
+        return redirect()->route('articles.my')->with('success', 'Artikel berhasil di hapus');
     }
 
     public function myArticles(Request $request)

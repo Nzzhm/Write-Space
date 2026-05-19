@@ -50,7 +50,7 @@
                         <form action="{{ route('admin.tags.destroy', $tag) }}" method="POST" class="delete-form">
                             @csrf
                             @method('DELETE')
-                            <button type="button"
+                            <button type="submit"
                                     class="delete-btn text-[0.65rem] tracking-wider uppercase text-red-400 hover:text-red-700 transition-colors">
                                 Hapus
                             </button>
@@ -71,15 +71,5 @@
             {{ $tags->links() }}
         </div>
     </section>
-
-    <script>
-        document.querySelectorAll('.delete-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                if (confirm('Yakin hapus tag ini? Tag akan terlepas dari semua artikel.')) {
-                    btn.closest('form').submit();
-                }
-            });
-        });
-    </script>
 
 </x-admin-layout>

@@ -10,21 +10,17 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
-    public function show(Category $category){
-        $articles = $category->articles()->latest()->paginate(10);
+    public function show(Category $category, Request $request){
+        $articles = $category->articles()
+        ->when($request->search, function($query) use ($request){
+            $query->where('title', 'like', '%' . $request->search . '%');
+        })
+        ->latest()->paginate(6);
+
+        $articles->appends($request->only('search'));
         return view('articles.category_show', compact('category', 'articles'));
+
+        
     }
 
-    public function store(Request $request){
-        $request->validate([
-            'name' => 'required|max:100'
-        ]);
-
-        Category::create([
-            'name' => $request->name,
-            'slug' => Str::slug($request->name)
-        ]);
-
-        return back()->with('success', 'Kategori berhasil di tambahkan');
-    }
 }

@@ -114,12 +114,11 @@
                        class="font-sans text-[0.72rem] tracking-[0.1em] uppercase text-stone-800 border border-stone-800 px-5 py-2 hover:bg-stone-800 hover:text-white transition-colors">
                         Edit
                     </a>
-                    <form action="{{ route('articles.destroy', $article) }}" method="POST"
-                          onsubmit="return confirm('Yakin hapus artikel ini?')">
+                    <form action="{{ route('articles.destroy', $article) }}" method="POST" class="delete-form">
                         @csrf
                         @method('DELETE')
-                        <button type="submit"
-                                class="font-sans text-[0.72rem] tracking-[0.1em] uppercase text-red-800 border border-red-800 px-5 py-2 hover:bg-red-800 hover:text-white transition-colors cursor-pointer bg-transparent">
+                        <button type="button"
+                                class="delete-btn font-sans text-[0.72rem] tracking-[0.1em] uppercase text-red-800 border border-red-800 px-5 py-2 hover:bg-red-800 hover:text-white transition-colors cursor-pointer bg-transparent">
                             Hapus
                         </button>
                     </form>

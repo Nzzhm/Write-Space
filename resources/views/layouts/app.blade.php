@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
         <link rel="icon" type="image/png" href="{{ asset('gambar/logo2.png') }}">
+        <script src="https://kit.fontawesome.com/b566bc1f7a.js" crossorigin="anonymous"></script>
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @stack('styles')

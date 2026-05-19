@@ -13,15 +13,11 @@
         {{-- TOP BAR --}}
         <div class="border-b bg-white px-6 py-4 flex items-center justify-between sticky top-0 z-10">
             <h1 class="font-serif text-xl font-semibold">Edit Artikel</h1>
-            <div class="flex gap-3">
-                <a href="{{ route('articles.show', $article) }}"
-                   class="border border-black px-5 py-2 text-sm hover:bg-gray-100 transition">
-                    Batal
+            <div class="flex">
+                <a href="{{ url()->previous() !== url()->current() ? url()->previous() : route('articles.index') }}"
+                    class="border border-black px-10 py-2 text-sm hover:bg-black hover:text-white transition mr-8">
+                    Cancel
                 </a>
-                <button form="article-form" type="submit"
-                        class="bg-black text-white px-5 py-2 text-sm hover:bg-gray-800 transition">
-                    Simpan
-                </button>
             </div>
         </div>
 
@@ -136,6 +132,12 @@
                         </div>
                     </div>
 
+                <div>
+                    <button form="article-form" type="submit" name="status" value="published"
+                        class="bg-black text-white px-5 py-2 text-sm transition w-full border border-black hover:text-black hover:bg-white">
+                         Publish
+                    </button>
+                </div>
                 </div>
             </div>
         </form>
