@@ -73,7 +73,7 @@ class ArticleController extends Controller
 
 
         $article = Article::create([
-            'user_id' => auth()->id,
+            'user_id' => auth()->id(),
             'title' => $request->title,
             'body' => $request->body,
             'slug' => $slug,
@@ -206,7 +206,7 @@ class ArticleController extends Controller
     {
         $articles = Article::where('user_id', Auth::id())->with('category', 'user')->when($request->filled('search'), function ($query) use ($request){
             $query->where('title', 'like', '%'. $request->search . '%');
-        })->latest()->get();
+        })->latest()->paginate(10);
 
         return view('articles.my-articles', compact('articles'));
     }

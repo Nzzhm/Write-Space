@@ -2,7 +2,7 @@
     <div class="container mx-auto px-6 sm:px-6 lg:px-8">
 
     
-    <section class="py-8 my-4 px-6 rounded-xl bg-white shadow-lg">
+    <section class="py-8 my-4 px-6 rounded-xl bg-white shadow-lg mb-11">
             <h3 class="font-serif text-2xl font-semibold mb-4 border-b pb-2">Semua Artikel</h3>
 
             {{-- Tombol Tambah Artikel --}}
@@ -59,9 +59,14 @@
                                 </form>
                             </div>
                         </td>
-
+                        </tr>
                     @endforeach
                 </tbody>
+            </table>
+            <div class="mt-4">
+    {{ $articles->links() }}
+</div>
+    </section>
+</div>
 
-                </div>
 </x-app-layout>

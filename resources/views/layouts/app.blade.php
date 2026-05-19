@@ -7,20 +7,16 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
-        {{-- Sweet alert --}}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link rel="icon" type="image/png" href="{{ asset('gambar/logo2.png') }}">
 
-        {{-- CSS tambahan dari halaman lain --}}
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
         @stack('styles')
     </head>
-    <div class="font-sans antialiased">
+    <body class="font-sans antialiased"> {{-- ✅ tag body dipindah ke sini --}}
         <div class="min-h-screen bg-gray-100">
             @include('layouts.navigation')
 
@@ -37,29 +33,16 @@
             </main>
         </div>
 
-        {{-- JS tambahan dari halaman lain --}}
-        @stack('scripts')
+        @include('layouts.footer')
 
-        {{-- Jembatan: simpan pesan session ke elemen HTML --}}
-            @if(session('success'))
-                <div id="flash-message" 
-                    data-type="success" 
-                    data-message="{{ session('success') }}" 
-                    style="display:none">
-                </div>
-            @endif
-            @if(session('error'))
-                <div id="flash-message" 
-                    data-type="error" 
-                    data-message="{{ session('error') }}" 
-                    style="display:none">
-                </div>
-            @endif
+        @if(session('success'))
+            <div id="flash-message" data-type="success" data-message="{{ session('success') }}" style="display:none"></div>
+        @endif
+        @if(session('error'))
+            <div id="flash-message" data-type="error" data-message="{{ session('error') }}" style="display:none"></div>
+        @endif
 
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-            @stack('scripts') 
-
-            @include('layouts.footer')
-
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        @stack('scripts') {{-- ✅ hanya satu, setelah SweetAlert di-load --}}
     </body>
 </html>

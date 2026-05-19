@@ -32,6 +32,7 @@ Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(
     ->name('update.category');
     Route::get('/tags', [AdminController::class, 'tags'])->name('tags');
     Route::delete('/tags/{tag}', [AdminController::class, 'destroyTag'])->name('tags.destroy');
+    Route::get('/categories', [AdminController::class, 'categories'])->name('categories');
 });
 
 Route::get('/my-articles', [ArticleController::class, 'myArticles'])->middleware('auth')->name('articles.my');

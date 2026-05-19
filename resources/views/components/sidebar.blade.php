@@ -1,7 +1,8 @@
 <aside id="admin-sidebar"
-       class="fixed top-0 left-0 h-full w-64 bg-stone-900 text-stone-100 z-30
-              -translate-x-full lg:translate-x-0 lg:static lg:h-auto
+       class="fixed top-0 left-0 h-screen w-64 bg-stone-900 text-stone-100 z-30
+              -translate-x-full lg:translate-x-0
               transition-transform duration-300 flex flex-col">
+
 
     {{-- Brand --}}
     <div class="px-6 py-7 border-b border-stone-700/60">
@@ -26,6 +27,11 @@
                     'label' => 'Tags',
                     'route' => 'admin.tags',
                     'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z"/>',
+                ],
+                [
+                    'label' => 'Categories',
+                    'route' => 'admin.categories',
+                    'icon'  => '<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />',
                 ],
             ];
         @endphp

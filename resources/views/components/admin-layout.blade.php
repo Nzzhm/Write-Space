@@ -6,6 +6,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Admin — {{ config('app.name') }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <link rel="icon" type="image/png" href="{{ asset('gambar/logo2.png') }}">
 </head>
 <body class="bg-stone-50 font-sans antialiased">
 
@@ -20,7 +23,7 @@
         <x-sidebar />
 
         {{-- ── MAIN ── --}}
-        <div class="flex-1 flex flex-col min-w-0">
+        <div class="flex-1 flex flex-col min-w-0 lg:pl-64">
 
             {{-- Top bar (mobile only) --}}
             <header class="lg:hidden flex items-center justify-between px-5 py-4 bg-white border-b border-stone-200 sticky top-0 z-10">
@@ -58,7 +61,7 @@
             </main>
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function openSidebar() {
             document.getElementById('admin-sidebar').classList.remove('-translate-x-full');

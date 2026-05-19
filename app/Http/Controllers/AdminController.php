@@ -127,7 +127,7 @@ class AdminController extends Controller
             'slug' => Str::slug($request->name)
         ]);
 
-        return redirect()->route('admin.index')->with('success', 'Kategori berhasil di edit');
+        return redirect()->route('admin.categories')->with('success', 'Kategori berhasil di edit');
     }
 
     public function destroyCategory(Category $category)
@@ -153,5 +153,18 @@ class AdminController extends Controller
     {
         $tag->delete(); // pivot article_tag ikut terhapus karena cascade
         return back()->with('success', 'Tag berhasil dihapus!');
+    }
+
+    public function categories(Request $request)
+    {
+        $editingId = $request->query('edit');
+
+        $categories = Category::when($request->filled('search_category'), function ($q) use ($request) {
+                $q->where('name', 'like', '%' . $request->search_category . '%');
+            })
+            ->paginate(10, ['*'], 'category_page')
+            ->withQueryString();
+
+        return view('admin.categories', compact('categories', 'editingId'));
     }
 }
