@@ -1,4 +1,6 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 align="center">Write Space</h1>
+<p align="center">Website artikel dengan desain modern</p>
+<img width="1408" height="768" alt="Untitled design (2)" src="https://github.com/user-attachments/assets/f5e670fe-4267-4eda-9f37-76963e078692" />
 
 <img width="1199" height="1188" alt="Screenshot_19-5-2026_23828_127 0 0 1" src="https://github.com/user-attachments/assets/c991b199-1127-4c03-9167-c4beb629c35c" />
 
