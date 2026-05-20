@@ -1,63 +1,57 @@
-<h1 align="center">Write Space</h1>
-<p align="center">Website artikel dengan desain modern</p>
-<img width="1408" height="768" alt="Untitled design (2)" src="https://github.com/user-attachments/assets/f5e670fe-4267-4eda-9f37-76963e078692" />
-
-<img width="1199" height="1188" alt="Screenshot_19-5-2026_23828_127 0 0 1" src="https://github.com/user-attachments/assets/c991b199-1127-4c03-9167-c4beb629c35c" />
-
+<div style="font-size: 2em; font-weight: bold;" align="center">Write Space</div>
+<h3 align="center"><font size="4">Website artikel dengan desain modern</font></h3>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img width="250" alt="Logo Write Space" src="https://github.com/user-attachments/assets/f5e670fe-4267-4eda-9f37-76963e078692" />
 </p>
 
-## About Laravel
+<h3>Tentang Website</h3>
+<p>Website ini merupakan platform artikel modern yang dibangun menggunakan framework Laravel dan Tailwind CSS untuk desainnya. Proyek ini dirancang untuk memberikan ruang menulis yang nyaman, dinamis, serta memiliki visual yang estetis.</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<h3>Fitur Utama</h3>
+<ul>
+  <li>Sistem manajemen artikel (CRUD)</li>
+  <li>Halaman input yang modern</li>
+  <li>Desain antarmuka (UI/UX) bersih dan minimalis</li>
+  <li>Dashboard admin yang intuitif</li>
+</ul>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<h3>Tampilan Website</h3>
+<p>Berikut adalah beberapa cuplikan halaman dari project Write Space:</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<table>
+  <tr>
+    <td>
+      <img width="100%" alt="Screenshot_19-5-2026_23223_127 0 0 1" src="https://github.com/user-attachments/assets/1bf35824-147d-401c-bad1-a91988b84eb5" />
+      <p align="center"><i>Halaman Utama</i></p>
+    </td>
+    <td>
+     <img width="100%" height="2815" alt="Screenshot_19-5-2026_23251_127 0 0 1" src="https://github.com/user-attachments/assets/60d6cbbf-2799-4286-9b12-9bd8c802a304" />
+      <p align="center"><i>Halaman Artikel</i></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <img width="1199" height="1768" alt="Halaman Detail Artikel" src="https://github.com/user-attachments/assets/ed4eb47c-456d-4ed3-b24b-a91dbf657258" />
+      <img src="URL_GAMBAR_3_ANDA" width="100%" alt="Halaman Detail Artikel">
+      <p align="center"><i>Detail Artikel</i></p>
+    </td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/c991b199-1127-4c03-9167-c4beb629c35c" width="100%" alt="Halaman Kategori">
+      <p align="center"><i>Halaman Kategori</i></p>
+    </td>
+    <td>
+        <img width="1199" height="1713" alt="Halaman About" src="https://github.com/user-attachments/assets/04975abb-6ae4-49b6-b238-6518b3521e41" />
+      <p align="center"><i>Halaman About</i></p>
+    </td>
+      
+  </tr>
+  <!-- Ulangi struktur <tr>...</tr> di atas untuk gambar ke-5 sampai ke-12 -->
+</table>
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
 
-## Agentic Development
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
 
-```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
-```
-
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
